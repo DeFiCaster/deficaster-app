@@ -15,11 +15,11 @@ const defaultUrl = deployUrl
   : `http://localhost:${process.env.PORT ?? 3000}`;
 
 export const generateMetadata = ({
-  title = 'CastNotes',
+  title = 'DeFiCaster',
   description = 'A simple solution for issuing and managing attestations for Farcaster',
   frame = {},
   images,
-  url = 'https://github.com/CastNotes/',
+  url = 'https://github.com/DeFiCaster/',
   pathname,
 }: MetaTagsProps): Metadata => {
   const i = Array.isArray(images) ? images : [images];

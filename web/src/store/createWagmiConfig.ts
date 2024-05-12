@@ -17,7 +17,7 @@ export function createWagmiConfig(projectId: string) {
       },
     ],
     {
-      appName: 'CastNotes',
+      appName: 'DeFiCaster',
       projectId,
     },
   );

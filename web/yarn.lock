@@ -7230,9 +7230,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"castnotes-app@workspace:.":
+"DeFiCaster-app@workspace:.":
   version: 0.0.0-use.local
-  resolution: "castnotes-app@workspace:."
+  resolution: "DeFiCaster-app@workspace:."
   dependencies:
     "@babel/preset-env": "npm:^7.23.5"
     "@babel/preset-react": "npm:^7.23.3"

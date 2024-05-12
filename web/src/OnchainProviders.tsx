@@ -28,7 +28,7 @@ const wagmiConfig = createWagmiConfig(projectId);
  */
 const authKitConfig = {
   rpcUrl: 'https://mainnet.optimism.io',
-  domain: 'CastNotes.xyz',
+  domain: 'DeFiCaster.xyz',
   siweUri: process.env.NEXT_PUBLIC_WEBSITE_URL as string + '/login',
 };
 

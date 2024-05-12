@@ -74,7 +74,7 @@ export default function HomeHeader(props: any) {
       <Header />
       <div className="flex flex-col items-center justify-center">
         <h1 className={clsx(styles.HomeHeaderHeadline, 'font-robotoMono')}>
-          CastNotes
+          DeFiCaster
           <br />
           <br />
         </h1>

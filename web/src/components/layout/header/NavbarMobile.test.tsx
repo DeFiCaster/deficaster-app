@@ -13,7 +13,7 @@ describe('NavbarMobile', () => {
         <NavbarMobile />
       </OnchainProviders>,
     );
-    expect(screen.getByText('CastNotes')).toBeInTheDocument();
+    expect(screen.getByText('DeFiCaster')).toBeInTheDocument();
   });
 
   it('clicking the hamburger icon opens the navbar menu', async () => {
