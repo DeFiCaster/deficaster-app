@@ -1,22 +1,29 @@
-# DeFiCaster
+# DeFiCaster App - Connect Farcaster Frame with DeFi
 
-DeFiCaster is an user agent middleware built for Farcaster Frames. It allows user sign the message through farcaster frame and manage their portfolio through DeFiCaster.
+This repo is the front-end and back-end repo of DeFiCaster App.
 
+DeFiCaster is a middleware for farcaster users or developers who want to connect DeFi to Farcaster.
 
+## What is Farcaster
 
-# Structrue
+- Farcaster is one the most popular decentralized social protocol
+- It is a public social network similar to Twitter and Reddit. Users can create profiles, post "casts" and follow others. They own their accounts and relationships with other users and are free to move between different apps.
+- App: https://www.farcaster.xyz/
 
-This project has two main folders:
+## What is Farcaster Frames
+- A Frame lets you turn any cast into an interactive app.
+- The entry point to Blockchain Network
+- Massive Adoption Ready
 
-```bash
-.
-└── web
-    ├── app
-    └── src
-```
+## The idea of DeFiCaster
 
-[web](/web/README.md) folder contains all the frontend code
+- Building a middleware layer between DeFi and Farcaster Frame
 
+- Frames come with restrictions
+
+- Build a process and related tools for Farcaster Frame to maximal its ability
+
+- Connect DeFi and blockchain with large scale users through Farcaster Frames
 
 ## Getting Started
 
@@ -27,18 +34,17 @@ NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=ADD_WALLET_CONNECT_PROJECT_ID_HERE
 ```
 
 
-#### Step 2: copy `./web/.env.local.example ./web/.env.local` and fill out the following parameters
+#### Step 2: run `cp ./web/.env.local.example ./web/.env.local` and fill out the following parameters
 ```
 # The bot to sign attestation, any ETH accounts
 SIGN_BOT_PRIVATE_KEY=
 # This bot is used to post attestations on Farcaster, FID and Key should match
 FARCASTER_BOT_FID=
 FARCASTER_BOT_PRIVATE_KEY=
+# Schema Id from Sign Protocol
 NEXT_PUBLIC_SIGN_PROTOCOL_SCHEMA_ID_FARCASTER=
+# Neynar API Key
 NEXT_PUBLIC_REACT_NEYNAR_API_KEY=
-NEXT_PUBLIC_SIGN_SCAN_URL=
-NEXT_PUBLIC_SIGN_SCAN_API_URL=
-NEXT_PUBLIC_WEBSITE_URL=
 ```
 
 #### Step 3: Install and Run your onchain app
@@ -72,4 +78,3 @@ yarn lint
 This repo is built based on [Coinbase OnchainKit](https://github.com/coinbase/onchainkit)
 
 We are thinking of ways to make this step easier in the future! Happy hacking!
-
