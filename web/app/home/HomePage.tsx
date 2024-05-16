@@ -1,5 +1,7 @@
+/* eslint-disable react-perf/jsx-no-new-array-as-prop */
 'use client';
 import React, { useState } from "react";
+import { FrameMetadata } from '@coinbase/onchainkit';
 import { useProfile } from '@farcaster/auth-kit';
 import { useAccount } from 'wagmi'
 import Footer from '@/components/layout/footer/Footer';
@@ -34,6 +36,37 @@ export default function HomePage() {
         <Attest isAuthenticated={isAuthenticated} profile={{ username, fid }} castURL={castURL} cast={cast} castFID={castFID} castHash={castHash} account={account} />
       </Main>
       <Footer />
+      <FrameMetadata
+        buttons={[
+          {
+            label: 'Choose a service',
+          },
+          {
+            action: 'post',
+            label: 'Lending - Compound',
+          },
+          // {
+          //   action: 'post',
+          //   label: 'Lending - AAVE',
+          // },
+          {
+            action: 'post',
+            label: 'Margin - Dydx',
+          },
+          {
+            action: 'post',
+            label: 'Swap - Uniswap',
+          },
+        ]}
+        image={{
+          src: 'https://zizzamia.xyz/park-3.png',
+          aspectRatio: '1:1'
+        }}
+        // input={{
+        //   text: 'Tell me a boat story',
+        // }}
+        postUrl={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/frame`}
+      />
     </>
   );
 }
