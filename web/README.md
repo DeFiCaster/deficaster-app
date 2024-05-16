@@ -1,15 +1,29 @@
-# DeFiCaster App
+# DeFiCaster App - Connect Farcaster Frame with DeFi
 
-This repo is the front end of DeFiCaster App.
+This repo is the front-end and back-end repo of DeFiCaster App.
 
-DeFiCaster is a simple solution for issuing and managing attestations in the form of a client application for Farcaster, the leading decentralised social network protocol in the world.
+DeFiCaster is a middleware for farcaster users or developers who want to connect DeFi to Farcaster.
 
-By building this solution in the form of a Farcaster client, users will be able to:
+## What is Farcaster
 
-- join the attestation ecosystem of [`Sign Protocol`](https://sign.global/) with their existing Farcaster accounts.
-- contribute to the growth and issuance of attestations in Sign Protocol’s attestation ecosystem. As easy as making a social media post, probably easier.
-- test and suggest new schemas for Sign Protocol’s schema registry
-- attest to the social media content they see, i.e., can function akin to X’s Community Notes feature
+- Farcaster is one the most popular decentralized social protocol
+- It is a public social network similar to Twitter and Reddit. Users can create profiles, post "casts" and follow others. They own their accounts and relationships with other users and are free to move between different apps.
+- App: https://www.farcaster.xyz/
+
+## What is Farcaster Frames
+- A Frame lets you turn any cast into an interactive app.
+- The entry point to Blockchain Network
+- Massive Adoption Ready
+
+## The idea of DeFiCaster
+
+- Building a middleware layer between DeFi and Farcaster Frame
+
+- Frames come with restrictions
+
+- Build a process and related tools for Farcaster Frame to maximal its ability
+
+- Connect DeFi and blockchain with large scale users through Farcaster Frames
 
 ## Getting Started
 
