@@ -1,13 +1,7 @@
 # DeFiCaster
 
-DeFiCaster is a simple solution for issuing and managing attestations in the form of a client application for Farcaster, the leading decentralised social network protocol in the world.
+DeFiCaster is an user agent middleware built for Farcaster Frames. It allows user sign the message through farcaster frame and manage their portfolio through DeFiCaster.
 
-By building this solution in the form of a Farcaster client, users will be able to:
-
-- join the attestation ecosystem of [`Sign Protocol`](https://sign.global/) with their existing Farcaster accounts.
-- contribute to the growth and issuance of attestations in Sign Protocol’s attestation ecosystem. As easy as making a social media post, probably easier.
-- test and suggest new schemas for Sign Protocol’s schema registry
-- attest to the social media content they see, i.e., can function akin to X’s Community Notes feature
 
 
 # Structrue
