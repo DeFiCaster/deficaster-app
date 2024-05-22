@@ -48,21 +48,21 @@ export default function Footer() {
 
           <div className="font-robotoMono flex flex-col items-start justify-center gap-4 text-center text-xl font-medium text-white">
             EXPERIENCES
-            <NavbarLink target="_blank" href="https://www.ethsign.xyz/">
+            {/* <NavbarLink target="_blank" href="https://www.ethsign.xyz/">
               <span className="flex items-center gap-1 px-2">
                 Sign Protocol <ArrowTopRightIcon width="16" height="16" />
               </span>
-            </NavbarLink>
+            </NavbarLink> */}
             <NavbarLink target="_blank" href="https://docs.farcaster.xyz/">
               <span className="flex items-center gap-1 px-2">
                 Farcaster <ArrowTopRightIcon width="16" height="16" />
               </span>
             </NavbarLink>
-            <NavbarLink target="_blank"  href="https://scan.sign.global/">
+            {/* <NavbarLink target="_blank"  href="https://scan.sign.global/">
               <span className="flex items-center gap-1 px-2">
                 Sign Scan <ArrowTopRightIcon width="16" height="16" />
               </span>
-            </NavbarLink>
+            </NavbarLink> */}
             <NavbarLink target="_blank" href="https://www.base.org/">
               <span className="flex items-center gap-1 px-2">
                 Base <ArrowTopRightIcon width="16" height="16" />

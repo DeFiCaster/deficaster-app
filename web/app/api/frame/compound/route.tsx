@@ -2,7 +2,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { FrameRequest, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { getReturnFrame } from '../uniswap';
+import { getReturnFrame, getTBDFrame } from '../uniswap';
+import { getSupplyFrame } from './index';
 
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
@@ -13,34 +14,12 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
     // }
     const frameRequest: FrameRequest = await req.json();
     const button = frameRequest.untrustedData.buttonIndex;
-    if (button == 2) {
-        console.log('return frame')
-        console.log('get return frame', await getReturnFrame())
-        return getReturnFrame()
+    
+    if (button == 1) {
+        console.log('supply')
+        return getSupplyFrame()
     }
-
-    return new NextResponse(
-        getFrameHtmlResponse({
-            buttons: [
-                {
-                    label: 'TBD',
-                },
-                // {
-                //     action: 'post',
-                //     label: 'Return',
-                //     target: '/',
-                // }
-            ],
-            image: {
-                src: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/release/v-0-12.png`,
-            },
-            postUrl: `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/frame/compound`,
-            state: {
-                page: 1,
-                time: new Date().toISOString(),
-            },
-        }),
-    );
+    return getTBDFrame()
 }
 
 export async function POST(req: NextRequest): Promise<Response> {

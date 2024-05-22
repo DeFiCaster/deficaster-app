@@ -2,9 +2,9 @@ import { generateMetadata } from '@/utils/generateMetadata';
 import HomePage from './home/HomePage';
 
 export const metadata = generateMetadata({
-  title: 'DeFiCaster - Attest your cast',
+  title: 'DeFiCaster - Web3 social payment layer',
   description:
-    'Attest farcaster\'s cast with Sign Protocol',
+    'Simplifying DeFi interaction through the web3 social payment layer.',
   images: 'themes.png',
   pathname: '',
 });

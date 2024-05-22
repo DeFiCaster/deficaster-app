@@ -9,10 +9,10 @@ import React, { useState, useCallback } from 'react';
 import { SignProtocolClient, SpMode, OffChainSignType, OffChainRpc } from '@ethsign/sp-sdk';
 // import InputCheckbox from 'app/home/_components/InputCheckbox';
 import InputText from 'app/home/_components/InputText';
+import { FarcasterEmbed } from "react-farcaster-embed/dist/client";
 import { useAccount } from 'wagmi';
 import Button from '@/components/Button/Button';
 import InputRadiobox from './InputRadiobox';
-import { FarcasterEmbed } from "react-farcaster-embed/dist/client";
 
 export default function Attest(props: any) {
   const [comment, setComment] = useState('');

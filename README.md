@@ -1,8 +1,14 @@
 # DeFiCaster App - Connect Farcaster Frame with DeFi
 
-This repo is the front-end and back-end repo of DeFiCaster App.
+This repo contains the front-end, back-end and smart contracts of DeFiCaster App.
 
 DeFiCaster is a middleware for farcaster users or developers who want to connect DeFi to Farcaster.
+
+### Structure
+
+- front-end: './web'
+- back-end: './web/app/api'
+- smart contracts: './contracts'
 
 ## What is Farcaster
 
@@ -25,6 +31,14 @@ DeFiCaster is a middleware for farcaster users or developers who want to connect
 
 - Connect DeFi and blockchain with large scale users through Farcaster Frames
 
+## Smart Contracts Deployment
+
+### Sepolia
+
+- `DeFiCasterPaymentAgent`: [0xc5dfe8fffc58196b90cf4494400f7f3fd97d2e8f](https://sepolia.etherscan.io/address/0xc5dfe8fffc58196b90cf4494400f7f3fd97d2e8f)
+- `CompoundPlugin`: [0x597acc9e2d3fc1031383a748b52bfe00a20f054f](https://sepolia.etherscan.io/address/0x597acc9e2d3fc1031383a748b52bfe00a20f054f)
+
+
 ## Getting Started
 
 #### Step 1: Obtain Wallet Connect Project ID from [walletconnect.com](https://cloud.walletconnect.com/sign-in) and assign to the `.env.local` file
@@ -32,7 +46,6 @@ DeFiCaster is a middleware for farcaster users or developers who want to connect
 ```bash
 NEXT_PUBLIC_WALLET_CONNECT_PROJECT_ID=ADD_WALLET_CONNECT_PROJECT_ID_HERE
 ```
-
 
 #### Step 2: run `cp ./web/.env.local.example ./web/.env.local` and fill out the following parameters
 ```

@@ -1,3 +1,4 @@
+/* eslint-disable react-perf/jsx-no-new-function-as-prop */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-misused-promises */
 /* eslint-disable react/jsx-no-bind */
@@ -44,7 +45,7 @@ const getCastByURL = async (url: string) => {
 export default function HomeHeader(props: any) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
-  const [buttonContent, setButtonContent] = useState("Get Cast");
+  const [buttonContent, setButtonContent] = useState("Share Frames");
 
   async function retrieveCast() {
     console.log(props.castURL);
@@ -63,11 +64,13 @@ export default function HomeHeader(props: any) {
     } catch (error) {
       console.log("Error fetching cast data: ", error);
     } finally {
-      setButtonContent("Get Cast");
+      setButtonContent("Share The Frame");
     }
 
   }
-
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
   return (
     <div className={styles.HomeHeader}>
       <div className={styles.HomeHeaderGradient} />
@@ -79,16 +82,16 @@ export default function HomeHeader(props: any) {
           <br />
         </h1>
         <p id="anchor1" className={styles.HomeHeaderParagraph}>
-          Attest the casts
+          {/* Connect DeFi to web3 social. */}
           <br />
-          Build a better social network.
+          Simplifying DeFi interaction through the web3 social payment layer.
         </p>
         {/* <div className={styles.HomeHeaderCta}>
           <CodeBlock code={codeStep1} />
         </div> */}
         <div className="w-1/2">
           <div className="mb-5">
-            <Label htmlFor="CastID">Cast</Label>
+            {/* <Label htmlFor="CastID">Cast</Label>
             <InputText
               id="castURL"
               placeholder="Cast URL"
@@ -96,11 +99,16 @@ export default function HomeHeader(props: any) {
               onChange={(evt) => props.setCastURL(evt.target.value)}
               disabled={false}
               required
-            />
-            <Button
+            /> */}
+            {/* <Button
               buttonContent={buttonContent}
               type="submit"
               onClick={retrieveCast}
+              disabled={false}
+            /> */}
+            <Button
+              buttonContent={buttonContent}
+              onClick={() => openInNewTab("https://warpcast.com/~/developers/frames")}
               disabled={false}
             />
           </div>

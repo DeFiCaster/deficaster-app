@@ -16,10 +16,10 @@ const defaultUrl = deployUrl
 
 export const generateMetadata = ({
   title = 'DeFiCaster',
-  description = 'A simple solution for issuing and managing attestations for Farcaster',
+  description = 'Simplify DeFi interactions through a web3 social payment layer',
   frame = {},
   images,
-  url = 'https://github.com/DeFiCaster/',
+  url = 'https://github.com/DeFiCaster',
   pathname,
 }: MetaTagsProps): Metadata => {
   const i = Array.isArray(images) ? images : [images];
