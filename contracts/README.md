@@ -69,7 +69,19 @@ Use your variables
 ### Deploy
 
 ```shell
-$ forge script --chain sepolia script/DeFiCasterPaymentAgent.s.sol:DeFiCasterPaymentAgentScript --rpc-url <your_rpc_url>
+$ source .env
+$ forge script --chain sepolia  script/DeFiCasterPaymentAgent.s.sol --rpc-url $SEPOLIA_RPC_URL --broadcast --verify -vvvv
+```
+
+### Verify Contract
+
+In last step, if verified sucess, then this step can be ignored.
+
+If it's failed to verify, then run the following commend to verify:
+
+```shell
+$  forge v -c sepolia [DEPLOYED_ADDRESS] ./src/DeFiCasterPaymentAgent.sol:DeFiCasterPaymentAgent
+$  forge v -c sepolia [DEPLOYED_ADDRESS] ./src/plugins/CompoundPlugin.sol:CompoundPlugin
 ```
 
 ### Cast

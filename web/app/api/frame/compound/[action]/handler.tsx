@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
@@ -24,12 +25,14 @@ export const handleSupply = async (userAddress, token, decimals: number, amount)
 
     try {
         // agentContract.connect(signer);
-        const tx = await agentContract.spend('compound', userAddress, token, amountB, ethers.toUtf8Bytes(''), {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/prefer-ts-expect-error
+        // @ts-ignore
+        const tx = await agentContract.spend('compound', userAddress, token, amountB, {
             gasLimit
         });
         console.log('[handleSupply]tx sent success', tx);
     } catch (e) {
-        console.error('[handleSupply] failed to spend on params', 'compound', userAddress, token, amountB, ethers.toUtf8Bytes(''))
+        console.error('[handleSupply] failed to spend on params', 'compound', userAddress, token, amountB)
         console.error(e)
         return false
     }
