@@ -35,8 +35,8 @@ DeFiCaster is a middleware for farcaster users or developers who want to connect
 
 ### Sepolia
 
-- `DeFiCasterPaymentAgent`: [0xc5dfe8fffc58196b90cf4494400f7f3fd97d2e8f](https://sepolia.etherscan.io/address/0xc5dfe8fffc58196b90cf4494400f7f3fd97d2e8f)
-- `CompoundPlugin`: [0x597acc9e2d3fc1031383a748b52bfe00a20f054f](https://sepolia.etherscan.io/address/0x597acc9e2d3fc1031383a748b52bfe00a20f054f)
+- `DeFiCasterPaymentAgent`: [0x6B53782195d2D5C78Cab63d624d0AFE3Fead8dF4](https://sepolia.etherscan.io/address/0x6B53782195d2D5C78Cab63d624d0AFE3Fead8dF4)
+- `CompoundPlugin`: [0xEf46a0839C3EBC5e46Fc9DE4EEaCb6A6bc8938eD](https://sepolia.etherscan.io/address/0xEf46a0839C3EBC5e46Fc9DE4EEaCb6A6bc8938eD)
 
 
 ## Getting Started

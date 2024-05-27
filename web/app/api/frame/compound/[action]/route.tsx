@@ -38,8 +38,9 @@ async function getResponse(req: NextRequest, params): Promise<NextResponse> {
     const amount = parseInt(frameRequest.untrustedData.inputText, 10)
     if (action === 'supply') {
         // supply form submitted
-        await handleSupply(userAddress, usdcAddress, 6, amount)
-        return getSupplyResultFrame();
+        const result = await handleSupply(userAddress, usdcAddress, 6, amount);
+        const msg: string = result ? result.hash : result;
+        return getSupplyResultFrame(msg);
     } else if (action === 'borrow') {
         return getTBDFrame();
     }

@@ -69,14 +69,15 @@ export async function getSupplyResultFrame(txn_hash = '') {
                 {
                     label: 'Txn Sent',
                 },
+                
+                {
+                    label: 'Return',
+                    action: 'post'
+                },
                 {
                     label: 'Supply',
                     action: 'link',
                     target: 'https://sepolia.etherscan.io/tx/' + txn_hash
-                },
-                {
-                    label: 'Supply',
-                    action: 'post'
                 }
             ],
             image: {
@@ -84,7 +85,7 @@ export async function getSupplyResultFrame(txn_hash = '') {
                 aspectRatio: '1:1',
             },
             postUrl: process.env.NEXT_PUBLIC_WEBSITE_URL as string + '/api/frame/entry',
-            ogTitle: 'DeFiCaster - Compound',
+            ogTitle: 'DeFiCaster - Compound Supply Result',
             ogDescription: 'Compound supply transaction result',
         }),
     );
