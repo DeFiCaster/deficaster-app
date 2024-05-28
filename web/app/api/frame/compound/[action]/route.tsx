@@ -30,7 +30,7 @@ async function getResponse(req: NextRequest, params): Promise<NextResponse> {
         console.error(e)
         return getErrorFrame();
     }
-    userAddress = '0x5DfD4b5515940a82358905B88D1C956b356c3C15' // Todo:: delete this
+    // userAddress = '0x5DfD4b5515940a82358905B88D1C956b356c3C15' // Todo:: delete this
     if (userAddress == null) {
         return getErrorFrame('No binding address');
     }

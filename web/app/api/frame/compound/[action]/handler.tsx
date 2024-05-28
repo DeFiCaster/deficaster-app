@@ -31,7 +31,7 @@ export const handleSupply = async (userAddress, token, decimals: number, amount)
             gasLimit
         });
         console.log('[handleSupply]tx sent success', tx);
-        return tx.hash
+        return tx
     } catch (e) {
         console.error('[handleSupply] failed to spend on params', 'compound', userAddress, token, amountB)
         console.error(e)

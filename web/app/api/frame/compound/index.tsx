@@ -68,16 +68,13 @@ export async function getSupplyResultFrame(txn_hash = '') {
             buttons: [
                 {
                     label: 'Txn Sent',
+                    action: 'link',
+                    target: 'https://sepolia.etherscan.io/tx/' + txn_hash
                 },
                 
                 {
                     label: 'Return',
                     action: 'post'
-                },
-                {
-                    label: 'Supply',
-                    action: 'link',
-                    target: 'https://sepolia.etherscan.io/tx/' + txn_hash
                 }
             ],
             image: {
