@@ -13,13 +13,13 @@ const initWallet = () => {
     return [provider, signer, agentContract]
 }
 
-export const handleSupply = async (userAddress, token, decimals: number, amount) => {
+export const handleSupply = async (userAddress, token, decimals: number, amount: number) => {
     console.log('start to handle supply', userAddress, token, decimals, amount)
     // const decimals = 6
     // start to mint for the users
     // Todo: MQ
     const [provider, signer, agentContract] = initWallet();
-    const amountB = amount * (10^decimals); //Todo:: use BigNumber
+    const amountB = BigInt(amount) * BigInt(Math.pow(10, decimals));
     const gasLimit = 300000n;
     // Todo:: detect allowance first
 
@@ -30,14 +30,13 @@ export const handleSupply = async (userAddress, token, decimals: number, amount)
         const tx = await agentContract.spend('compound', userAddress, token, amountB, {
             gasLimit
         });
-        console.log('[handleSupply]tx sent success', tx);
+        console.log('[handleSupply] tx sent success', tx, '[params]:', 'compound', userAddress, token, amountB);
         return tx
     } catch (e) {
         console.error('[handleSupply] failed to spend on params', 'compound', userAddress, token, amountB)
         console.error(e)
         return false;
     }
-    return true
 }
 
 export const handleBorrow = async (token, amount) => {
